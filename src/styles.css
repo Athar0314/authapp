@@ -4,6 +4,7 @@
 html,
 body {
   height: 89%;
+  width: 100%;
   background-color: var(--bg-color);
   color: var(--font-color);
 }
