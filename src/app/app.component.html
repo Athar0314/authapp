@@ -47,6 +47,7 @@
     background-color: #1976d2;
     color: white;
     font-weight: 600;
+    white-space: nowrap;
   }
 
   .toolbar img {
@@ -89,9 +90,6 @@
     .web {
       display: block;
     }
-    .toolbar {
-      width: 150%;
-    }
   }
 </style>
 
@@ -114,12 +112,12 @@
   >
   <button
     mat-icon-button
-    [matMenuTriggerFor]="menu"
+    [matMenuTriggerFor]="beforeMenu"
     aria-label="Example icon-button with a menu"
   >
     <mat-icon>more_vert</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
+  <mat-menu #beforeMenu="matMenu">
     <div class="web">
       <button mat-menu-item routerLink="">Home</button>
       <button mat-menu-item *ngIf="isAdmin()" routerLink="/user">User</button>
