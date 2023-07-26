@@ -1,0 +1,15 @@
+.avatar {
+  position: relative;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  top: 8px;
+}
+.mat-mdc-menu-content {
+  width: 190px;
+}
+
+.profile {
+  display: flex;
+}

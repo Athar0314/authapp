@@ -1,0 +1,8 @@
+.mat-mdc-card {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+.mat-elevation-z8 {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}

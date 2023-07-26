@@ -1,0 +1,7 @@
+.mat-mdc-form-field {
+  display: contents;
+}
+.mat-mdc-dialog-container {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}

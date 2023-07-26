@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header>
+    <h2>Registration</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <form
+      class="example-form"
+      [formGroup]="signupForm"
+      (ngSubmit)="proceedsignUp()"
+    >
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="id" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          [type]="hide ? 'password' : 'text'"
+          formControlName="password"
+          (cut)="$event.preventDefault()"
+          (copy)="$event.preventDefault()"
+          (paste)="$event.preventDefault()"
+        />
+        <mat-icon matTextSuffix (click)="hide = !hide">{{
+          hide ? "visibility" : "visibility_off"
+        }}</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Image Url</mat-label>
+        <input matInput formControlName="imgurl" />
+      </mat-form-field>
+      <mat-radio-group formControlName="gender" aria-label="Select Gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+      <div>
+        <button mat-raised-button color="primary">Submit</button>
+        <a mat-raised-button routerLink="/login" color="accent"
+          >Back To login</a
+        >
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

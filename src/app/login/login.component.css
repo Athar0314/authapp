@@ -1,0 +1,8 @@
+.mat-mdc-form-field {
+  display: contents;
+}
+.mat-mdc-card .mdc-card {
+  width: 900px;
+  margin: 60px;
+  overflow: hidden;
+}

@@ -1,0 +1,40 @@
+<div mat-dialog-title>
+  <h1>{{ data ? "Update" : "Add" }} Customer</h1>
+</div>
+<div mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="custForm" (ngSubmit)="addCust()">
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label>Created By</mat-label>
+          <input
+            matInput
+            formControlName="createdBy"
+            [(ngModel)]="this.username"
+          />
+        </mat-form-field> -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Credit Limit</mat-label>
+          <input matInput type="number" formControlName="creditLimit" />
+        </mat-form-field>
+        <div mat-dialog-actions>
+          <button mat-raised-button mat-dialog-close color="accent">
+            Cancel
+          </button>
+          <button
+            mat-dialog-close
+            mat-raised-button
+            type="submit"
+            color="primary"
+          >
+            {{ data ? "Update" : "Save" }}
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

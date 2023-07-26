@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "ngx-toastr/toastr";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html,
+body {
+  height: 89%;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: white;
+  --font-color: black;
+}
+[data-theme="dark"] {
+  --bg-color: black;
+  --font-color: white;
+}

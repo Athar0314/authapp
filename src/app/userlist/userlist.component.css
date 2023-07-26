@@ -1,0 +1,4 @@
+.mat-mdc-card {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
