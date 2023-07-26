@@ -8,6 +8,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { CustomerComponent } from './customer/customer.component';
 import { Page404Component } from './page404/page404.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'signup',
     component: RegistrationComponent,
+  },
+  {
+    path: 'about',
+    component: AboutpageComponent,
   },
   {
     path: 'profile',

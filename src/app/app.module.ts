@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from 'src/enviroment/enviroments.prod';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdatecustComponent } from './updateuser/updateuser.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UpdatecustComponent } from './updateuser/updateuser.component';
     UserlistComponent,
     ProfileComponent,
     UpdatecustComponent,
+    AboutpageComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,9 @@ import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
+import { DialogRef } from '@angular/cdk/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { AboutpageComponent } from '../aboutpage/aboutpage.component';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +19,8 @@ export class LoginComponent implements OnInit {
     private toast: ToastrService,
     private builder: FormBuilder,
     private api: ApiService,
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog
   ) {
     sessionStorage.clear();
   }
@@ -48,6 +52,14 @@ export class LoginComponent implements OnInit {
         },
       });
     }
+  }
+  about() {
+    this.dialog.open(AboutpageComponent, {
+      enterAnimationDuration: '1000ms',
+      exitAnimationDuration: '500ms',
+      width: '50%',
+      height: '80%',
+    });
   }
   ngOnInit(): void {
     this.proceedLogin();
