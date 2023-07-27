@@ -4,7 +4,6 @@
 
 .mat-mdc-card {
   width: 450px;
-  margin-left: 200px;
   background-color: var(--bg-color);
   color: var(--font-color);
 }

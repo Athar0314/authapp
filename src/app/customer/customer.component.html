@@ -4,14 +4,17 @@
     <button
       mat-raised-button
       color="primary"
-      style="left: 30%; margin-bottom: 10px"
+      style="left: 25%; margin-bottom: 10px"
       (click)="addCust()"
     >
       Add Customer
     </button>
   </mat-card-header>
   <mat-card-content>
-    <div class="mat-elevation-z8">
+    <div
+      style="max-width: 700px; overflow-x: auto; white-space: nowrap"
+      class="mat-elevation-z8"
+    >
       <table matSort mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="createdBy">
           <th mat-header-cell mat-sort-header *matHeaderCellDef>Created By</th>
