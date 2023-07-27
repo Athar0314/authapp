@@ -11,7 +11,9 @@ import { MatDialog } from '@angular/material/dialog';
 export class ProfileComponent implements OnInit {
   loggedInUser: any;
   userName = sessionStorage.getItem('username');
-  constructor(private api: ApiService, private dialog: MatDialog) {}
+  constructor(private api: ApiService, private dialog: MatDialog) {
+    this.userData();
+  }
   userData() {
     this.api.getBycode(this.userName).subscribe((res) => {
       this.loggedInUser = res;

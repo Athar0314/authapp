@@ -14,13 +14,13 @@ export class ApiService {
   getAll() {
     return this.http.get(this.apiurl + '/users');
   }
-  getBycode(code: any) {
+  getBycode(code: any): Observable<any> {
     return this.http.get(this.apiurl + '/users' + '/' + code);
   }
-  proceedRegistration(data: any) {
+  proceedRegistration(data: any): Observable<any> {
     return this.http.post(this.apiurl + '/users', data);
   }
-  updateUser(code: any, data: any) {
+  updateUser(code: any, data: any): Observable<any> {
     return this.http.put(this.apiurl + '/users' + '/' + code, data);
   }
   isLoggedIn() {
@@ -31,13 +31,13 @@ export class ApiService {
       ? sessionStorage.getItem('userrole')?.toString()
       : '';
   }
-  getAllRole() {
+  getAllRole(): Observable<any> {
     return this.http.get(this.apiurl + '/role');
   }
-  getAllCust() {
+  getAllCust(): Observable<any> {
     return this.http.get(this.apiurl + '/customer');
   }
-  getAccessbyRole(role: any, menu: any) {
+  getAccessbyRole(role: any, menu: any): Observable<any> {
     return this.http.get(
       this.apiurl + `/roleAccess?role=` + role + '&menu=' + menu
     );

@@ -15,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { environment } from 'src/enviroment/enviroments.prod';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdatecustComponent } from './updateuser/updateuser.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';

@@ -11,7 +11,9 @@ export class AppComponent implements OnInit {
   username = sessionStorage.getItem('username');
   loggedInUser: any;
   darkMode = false;
-  constructor(private service: ApiService) {}
+  constructor(private service: ApiService) {
+    this.userData();
+  }
   isLoggedIn() {
     if (this.service.isLoggedIn()) {
       return true;

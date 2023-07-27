@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     private dialog: MatDialog
   ) {
     sessionStorage.clear();
+    this.proceedLogin();
   }
 
   loginForm = this.builder.group({
